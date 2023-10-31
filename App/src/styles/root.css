@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    /* width: clamo(100vw, 80%, 100vw); */
+    width: 80%;
+}
+
+body {
+    background-image: url('../assets/images/wave.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    height: 100vh;
+}

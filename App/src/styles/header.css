@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: center;
+    background: #FFF;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.24);
+}
+.header>div {
+    display: flex;
+    height: 60px;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    height: 100%;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.88px;
+    gap: 1rem;
+}
+.menu>li {
+    cursor: pointer;
+    padding: 1rem;
+}
+.menu>li>a {
+    text-decoration: none;
+    color: #006B64;
+}
