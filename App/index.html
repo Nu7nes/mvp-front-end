@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./src/styles/root.css">
+    <link rel="stylesheet" href="./src/styles/global-styles.css">
+    <link rel="stylesheet" href="./src/styles/breakpoint-styles.css">
     <link rel="stylesheet" href="./src/styles/header.css">
     <link rel="stylesheet" href="./src/styles/main.css">
     <link rel="stylesheet" href="./src/styles/forms.css">
@@ -21,8 +23,13 @@
     <header class="header">
         <div class="container">
             <img class="logo" src="./src/assets/images/logo.png" alt="Logo Agenda Fácil UNIFESO">
-            <nav>
-                <ul class="menu">
+            <button class="menuButton" type="button">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </button>
+            <nav class="menu">
+                <ul>
                     <li><a href="#">Início</a></li>
                     <li><a href="#">Depoimentos</a></li>
                     <li><a href="#">Painel</a></li>
@@ -32,8 +39,10 @@
     </header>
 
     <main class="main container">
-        <section class="card">
-            <header>
+
+        <!-- <h1>Agenda Fácil</h1> -->
+        <section class="card shadow">
+            <header class="cardContainer">
                 <i class="icon">
                     <span class="material-symbols-outlined">
                         calendar_month
@@ -44,25 +53,22 @@
                     A UNIFESO pode te ajudar. Agende um atendimento com nosso time de voluintários!</p>
             </header>
 
-            <form class="form formSchedule">
+            <form class="form formSchedule cardContainer">
                 <div>
                     <label for="name">Nome:</label>
                     <input name="name" type="text" placeholder="Informe seu nome">
                 </div>
-
                 <div>
                     <label for="name">E-mail:</label>
                     <input name="email" type="email" placeholder="Informe seu E-mail">
                 </div>
-
                 <div>
                     <label for="name">Endereço:</label>
                     <input name="address" type="text" placeholder="Informe seu Endereço">
                 </div>
-
                 <div class="submitButton">
-                    <input type="submit" value="Agendar"> </input>
-                    <label for="submit">
+                    <input type="submit" value="Agendar" name="submitSchedule"> </input>
+                    <label for="submitSchedule">
                         <span class="material-symbols-outlined">
                             trending_flat
                         </span>
@@ -70,9 +76,59 @@
                 </div>
             </form>
         </section>
+
+
+        <div class="mainDivisor shadow">
+            <span class="material-symbols-outlined">
+                swap_vert
+            </span>
+        </div>
+
+
+        <section class="card">
+            <header class="cardContainer">
+                <i class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="69" height="56" viewBox="0 0 69 56" fill="none">
+                        <path
+                            d="M52.5468 21.1251H36.2186V27.1407C36.2186 31.4054 32.7489 34.8751 28.4843 34.8751C24.2196 34.8751 20.7499 31.4054 20.7499 27.1407V14.0782L13.7782 18.2677C11.705 19.503 10.4374 21.7481 10.4374 24.1544V29.2354L1.84364 34.1983C0.200082 35.1436 -0.369254 37.2491 0.586801 38.8927L9.18055 53.7813C10.1259 55.4249 12.2313 55.9835 13.8749 55.0382L24.9823 48.6251H39.6561C43.4481 48.6251 46.5311 45.5421 46.5311 41.7501H48.2499C50.1513 41.7501 51.6874 40.214 51.6874 38.3126V31.4376H52.5468C53.9755 31.4376 55.1249 30.2882 55.1249 28.8595V23.7032C55.1249 22.2745 53.9755 21.1251 52.5468 21.1251ZM68.413 17.1075L59.8192 2.21884C58.8739 0.575282 56.7684 0.0166887 55.1249 0.962001L44.0175 7.37509H33.0389C31.7499 7.37509 30.4931 7.74032 29.3973 8.41708L25.7987 10.6622C24.789 11.2852 24.1874 12.3917 24.1874 13.5733V27.1407C24.1874 29.5147 26.1102 31.4376 28.4843 31.4376C30.8583 31.4376 32.7811 29.5147 32.7811 27.1407V17.6876H52.5468C55.8661 17.6876 58.5624 20.3839 58.5624 23.7032V26.7647L67.1561 21.8018C68.7997 20.8458 69.3583 18.7511 68.413 17.1075Z"
+                            fill="#006B64" />
+                    </svg>
+                </i>
+                <h3>É um colaborador?</h3>
+                <p>Entre para acessar suas informações!</p>
+            </header>
+
+            <form class="form formSchedule cardContainer">
+                <div>
+                    <label for="matricula">Matrícula:</label>
+                    <input name="matricula" type="text" placeholder="Informe sua matrícula">
+                </div>
+                <div>
+                    <label for="name">Senha:</label>
+                    <input name="password" type="password" placeholder="Informe sua senha">
+                </div>
+                <div class="submitButton">
+                    <input type="submit" value="Entrar" name="submitUser">
+                    <label for="submitUser">
+                        <span class="material-symbols-outlined">
+                            trending_flat
+                        </span>
+                    </label>
+                </div>
+            </form>
+
+            <span class="lineDivisor"></span>
+
+            <footer class="cardContainer">
+                <p>É novo na instituição e deseja se voluntariar?</p>
+                <button type="button">Cadastre-se</button>
+            </footer>
+        </section>
     </main>
 
     <footer></footer>
+
+    <script type="module" src="./src/scripts/index.js"></script>
 </body>
 
 </html>
