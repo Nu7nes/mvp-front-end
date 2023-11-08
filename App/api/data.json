@@ -1,0 +1,10 @@
+{
+    "config": {
+        "init_hour": 8,
+        "end_hour": 17,
+        "pause_hour": 12,
+        "pause_time": 1,
+        "consultation_time": null,
+        "days": [1, 3]
+    }
+}

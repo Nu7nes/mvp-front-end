@@ -4,6 +4,13 @@
 
 .cardContainer {
     width: 75%;
+    min-width: 285px;
+}
+
+.d-flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
 }
 
 .open {
@@ -15,6 +22,28 @@
 .close {
     transform-origin: top;
     animation: animate-div-reverse 0.3s !important;
+}
+
+.openTimesForm {
+    display: block !important;
+    transform-origin: left;
+    transition: all 0.3s ease-in-out;
+    /* animation: animate-div 0.3s; */
+}
+
+.changeWidth {
+    width: 800px !important;
+    padding-left: 2rem !important;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    /* animation: animate-div-reverse 0.3s !important; */
+}
+
+.formWidth {
+    width: 350px !important;
 }
 
 .menuButton {
@@ -43,7 +72,7 @@
         opacity: 1;
         transform: scaleY(100%);
     }
-    
+
     to {
         opacity: 0;
         transform: scaleY(0);

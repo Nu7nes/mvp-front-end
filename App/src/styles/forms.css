@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 1rem;
     margin: 1rem 0;
+    min-width: 285px !important;
 }
 
 .form>div {
@@ -41,10 +42,10 @@
 
 div.submitButton {
     position: relative;
-
 }
 
-.form input[type="submit"] {
+.form input[type="submit"],
+.form input[type="button"] {
     display: flex;
     padding: 10px 20px;
     justify-content: space-between;
@@ -57,6 +58,7 @@ div.submitButton {
     cursor: pointer;
 }
 
+.form label[for="chooseTime"],
 .form label[for="submitSchedule"],
 .form label[for="submitUser"] {
     position: absolute;
@@ -65,11 +67,121 @@ div.submitButton {
     right: 1rem;
 }
 
+.form label[for="chooseTime"]>span,
 .form label[for="submitSchedule"]>span,
-.form label[for="submitUser"] >span {
+.form label[for="submitUser"]>span {
     color: #FFF;
     font-size: 1.5em;
     font-weight: 400;
     padding: 0;
     margin: 0;
 }
+
+.formInformation{
+    position: relative;
+}
+.formInformation::after {
+    content: "";
+    position: absolute;
+    right: -1rem;
+    display: block;
+    height: 100%;
+    width: 1px;
+    background-color: #D1D1D1;
+    margin: 1rem 0;
+}
+
+.formSchedule {
+    display: none;
+    width: 100%;
+    margin-right: 3rem;
+    height: 100%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+.formSchedule>header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.formSchedule>header>h3 {
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input[type="date"] {
+    width: 80% !important;
+    align-self: center;
+    height: 45px;
+    padding: 0px 18px;
+    border-radius: 5px;
+    border: 1px solid #D1D1D1;
+    cursor: pointer;
+}
+
+.availableTimes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.availableTimes>article {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+.availableTimes h4 {
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+.availableTimes .time {
+    display: flex;
+    /* padding: 0.8rem; */
+    margin: 0.5rem 0;
+    gap: 1rem;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #006B64;
+    background: #FFF;
+    overflow: hidden;
+}
+
+.availableTimes p {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.time>h6 {
+    background-color: #D1D1D1;
+    color: #000;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    min-width: 4rem;
+    text-align: center;
+}
+
+.time>p {
+    color: #000;
+    font-size: 11px;
+    font-weight: 400;
+    text-wrap: nowrap;
+}
+
+input[type="radio"] {
+    margin: 0.8rem;
+}
+
