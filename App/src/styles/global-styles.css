@@ -54,6 +54,10 @@
     box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.25);
 }
 
+.inactive {
+    border-color: #d1d1d1 !important;
+}
+
 
 @keyframes animate-div {
     from {

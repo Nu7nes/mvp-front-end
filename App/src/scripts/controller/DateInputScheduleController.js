@@ -4,10 +4,20 @@ export class DateInputScheduleControler {
         this.dateInput = document.querySelector('#date');
     }
 
+    get date() {
+        return this.dateInput.value;
+    }
+
+    set date(date) {
+        this.dateInput.value = date;
+    }
+
     init() {
         const date = new Date();
-        const todayData = date.toISOString().slice(0, 10);
-        this.dateInput.value = todayData;
+        const todayDate = date.toISOString().slice(0, 10);
+        // console.log(todayDate);
+        this.dateInput.value = todayDate;
+        return todayDate;
     }
 
     checkDay(days) {

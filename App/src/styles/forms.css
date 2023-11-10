@@ -18,8 +18,15 @@
     color: #006B64;
 }
 
+.form input[type=number]::-webkit-inner-spin-button,
+.form input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
 .form input[type="text"],
 .form input[type="email"],
+.form input[type="number"],
 .form input[type="password"] {
     display: flex;
     width: 100%;

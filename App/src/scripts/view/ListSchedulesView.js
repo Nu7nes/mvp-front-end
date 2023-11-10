@@ -1,3 +1,5 @@
+import { ListSchedulesModel } from "../model/ListSchedulesModel.js";
+
 export class ListScheduleView {
     constructor(list) {
         this.list = list;
@@ -9,7 +11,6 @@ export class ListScheduleView {
     }
 
     async render() {
-
         this.availableTimesDiv.innerHTML = '';  
         const morningArticle = document.createElement('article');
         const afternoonArticle = document.createElement('article');
@@ -22,20 +23,29 @@ export class ListScheduleView {
         afteroonH4.innerText = 'Tarde:';
         afternoonArticle.appendChild(afteroonH4);
 
-        await this.list.forEach((hour) => {
-            const formatedHour = hour.toFixed(2).replace('.', ':');
+        await this.list.forEach((schedule) => {
+            const formatedHour = schedule.hour.toFixed(2).replace('.', ':');
+
+            const listSchedulesModel = new ListSchedulesModel();
+            const updatedListSchedules = listSchedulesModel.crossHoursData(this.list);
+            this.list = updatedListSchedules;
+            console.log(this.list);
 
             const label = document.createElement('label');
             label.classList.add('time');
+            label.className += schedule.available ? '' : ' inactive'
             label.innerHTML = `
                     <h6>${formatedHour}</h6>
                     <p>Polo UNIFESO</p>
-                    <input type="radio" name="time" value="${formatedHour}">
+                    <input 
+                        type="radio"
+                        name="hour"
+                        value="${schedule.hour}" ${schedule.available ? '' : 'disabled'}>
                 `;
 
-            if (hour < 12) {
+            if (schedule.hour < 12) {
                 morningArticle.appendChild(label);
-            } else if (hour >= 12 && hour < 18) {
+            } else if (schedule.hour >= 12 && schedule.hour < 18) {
                 afternoonArticle.appendChild(label);
             }
         });

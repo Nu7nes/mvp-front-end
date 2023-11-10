@@ -2,16 +2,18 @@ import { ListSchedulesModel } from "../model/ListSchedulesModel.js";
 import { ListScheduleView } from "../view/ListSchedulesView.js";
 import { ChooseTimeButtonView } from "../view/ChooseTimeButtonView.js";
 import { DateInputScheduleControler } from "./DateInputScheduleController.js";
+import { ConcludeScheduleButtonController } from "./ConcludeScheduleButtonController.js";
 
-export class ChooseTime {
+export class ChooseTimeButtonController {
     constructor() {
         this.chooseTimeButton = document.querySelector('#chooseTimeButton');
-        this.chooseTimeButton.addEventListener('click', this.chooseTime.bind(this));
+        this.chooseTimeButton.addEventListener('click', this.displayTimes.bind(this));
         this.dateInput = document.querySelector('#date');
-        this.dateInput.addEventListener('change', this.chooseTime.bind(this));
+        this.dateInput.addEventListener('change', this.updateTimes.bind(this));
     }
 
-    chooseTime() {
+    displayTimes() {
+        // console.log(date);
         const listSchedulesModel = new ListSchedulesModel()
         const dateInputScheduleControler = new DateInputScheduleControler();
         listSchedulesModel.getConfig()
@@ -20,6 +22,7 @@ export class ChooseTime {
                 const listScheduleView = new ListScheduleView(listSchedulesModel.hours)
                 if (dateInputScheduleControler.checkDay(listSchedulesModel.days)) {
                     listScheduleView.render();
+                    const concludeScheduleButtonController = new ConcludeScheduleButtonController();
                 } else {
                     listScheduleView.emptyTimes();
                 }
@@ -28,6 +31,12 @@ export class ChooseTime {
 
         const chooseTimeButtonView = new ChooseTimeButtonView();
         chooseTimeButtonView.render();
+    }
 
+    updateTimes(event) {
+        const newDate = event.target.value;
+        const dateInputScheduleControler = new DateInputScheduleControler();
+        dateInputScheduleControler.date = newDate;
+        this.displayTimes();
     }
 }
