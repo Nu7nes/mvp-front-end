@@ -10,19 +10,20 @@ export class ChooseTimeButtonController {
         this.chooseTimeButton.addEventListener('click', this.displayTimes.bind(this));
         this.dateInput = document.querySelector('#date');
         this.dateInput.addEventListener('change', this.updateTimes.bind(this));
+        this.dateInputScheduleControler = new DateInputScheduleControler();
     }
 
     displayTimes() {
         // console.log(date);
         const listSchedulesModel = new ListSchedulesModel()
-        const dateInputScheduleControler = new DateInputScheduleControler();
+        
         listSchedulesModel.getConfig()
             .then(() => {
                 listSchedulesModel.calculateOpeningHours();
                 const listScheduleView = new ListScheduleView(listSchedulesModel.hours)
-                if (dateInputScheduleControler.checkDay(listSchedulesModel.days)) {
+                if (this.dateInputScheduleControler.checkDay(listSchedulesModel.days)) {
                     listScheduleView.render();
-                    const concludeScheduleButtonController = new ConcludeScheduleButtonController();
+                    // const concludeScheduleButtonController = new ConcludeScheduleButtonController();
                 } else {
                     listScheduleView.emptyTimes();
                 }
@@ -35,8 +36,7 @@ export class ChooseTimeButtonController {
 
     updateTimes(event) {
         const newDate = event.target.value;
-        const dateInputScheduleControler = new DateInputScheduleControler();
-        dateInputScheduleControler.date = newDate;
+        this.dateInputScheduleControler.date = newDate;
         this.displayTimes();
     }
 }

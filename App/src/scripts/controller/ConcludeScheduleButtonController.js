@@ -9,25 +9,26 @@ export class ConcludeScheduleButtonController {
     }
 
     concludeSchedule(event) {
-        event.preventDefault();
+        // event.preventDefault();
         const formData = new FormData(this.submitScheduleForm);
         const data = Object.fromEntries(formData);
 
         const formatNumberPhoneController = new FormatNumberPhoneController();
         data.phone = formatNumberPhoneController.formatToPost(data.phone);
-        
+
         try {
             const validateFormModel = new ValidadeFormModel(data);
             const validation = validateFormModel.validateForm();
-            if(validation) {
-                const concludeScheduleModel = new ConcludeScheduleModel(data);
-                concludeScheduleModel.save();
-            }
+            if (!validation) return;
+            const concludeScheduleModel = new ConcludeScheduleModel(data);
+            concludeScheduleModel.save();
+            alert('Agendamento realizado com sucesso!');
+            // window.location.reload();
         } catch (error) {
             console.log(error);
         }
         // const dataJson = JSON.stringify(data);
-       
+
         // this.postSchedule(dataJson);
     }
 }

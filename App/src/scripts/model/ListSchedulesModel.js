@@ -2,8 +2,8 @@ import { DateInputScheduleControler } from "../controller/DateInputScheduleContr
 
 export class ListSchedulesModel {
     constructor() {
-        this.config = {};
         this.dayHours = 24;
+        this.config = {};
         this.openingHours = [];
     }
 
@@ -47,18 +47,18 @@ export class ListSchedulesModel {
         const existingData = JSON.parse(localStorage.getItem('schedule')) || [];
         if (existingData.length === 0) return;
 
-        const currentDatesInvalid = existingData.map(existingItem => existingItem.date === selectedDate ? existingItem : null);
+        const currentDatesInvalid = existingData.map(existingItem => existingItem.date === selectedDate ? existingItem : '');
 
         const schedules = scheduleList;
-        if(scheduleList.length === 0) return;
-        scheduleList.find(item => {
-            for (let i in currentDatesInvalid) {
-                if (item.date === selectedDate && item.hour == Number(currentDatesInvalid[i].hour)) {
-                    item.available = false;
+        if (scheduleList) {
+            scheduleList.find(item => {
+                for (let i in currentDatesInvalid) {
+                    if (item.date === selectedDate && item.hour == Number(currentDatesInvalid[i].hour)) {
+                        item.available = false;
+                    }
                 }
-            }
-        })
-
+            })
+        }
         return schedules;
     }
 }

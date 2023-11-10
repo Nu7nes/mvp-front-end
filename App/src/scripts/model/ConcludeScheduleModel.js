@@ -1,12 +1,12 @@
 export class ConcludeScheduleModel {
     constructor(data) {
-        this.data = data
+        this.data = data;
     }
 
-    save() {
-        const existingData = JSON.parse(localStorage.getItem('schedule')) || [];
+    async save() {
+        const existingData = await JSON.parse(localStorage.getItem('schedule')) || [];
         existingData.push(this.data);
-        const dataJson = JSON.stringify(existingData);
+        const dataJson = await JSON.stringify(existingData);
         localStorage.setItem("schedule", dataJson);
     }
 }

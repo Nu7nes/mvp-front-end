@@ -54,7 +54,7 @@ div.submitButton {
 .form input[type="submit"],
 .form input[type="button"] {
     display: flex;
-    padding: 10px 20px;
+    padding: 11px 15px;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
@@ -68,9 +68,10 @@ div.submitButton {
 .form label[for="chooseTime"],
 .form label[for="submitSchedule"],
 .form label[for="submitUser"] {
+    height: min-content;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-43%);
     right: 1rem;
 }
 
