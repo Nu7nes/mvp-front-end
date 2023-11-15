@@ -20,9 +20,9 @@
 
 .form input[type=number]::-webkit-inner-spin-button,
 .form input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 .form input[type="text"],
 .form input[type="email"],
@@ -47,8 +47,13 @@
     border: 2px solid #006B64;
 }
 
-div.submitButton {
+div.submitButton ,
+div.cancelButton {
     position: relative;
+}
+
+div.cancelButton {
+    
 }
 
 .form input[type="submit"],
@@ -65,8 +70,10 @@ div.submitButton {
     cursor: pointer;
 }
 
+
 .form label[for="chooseTime"],
 .form label[for="submitSchedule"],
+.form label[for="cancelSchedule"],
 .form label[for="submitUser"] {
     height: min-content;
     position: absolute;
@@ -77,6 +84,7 @@ div.submitButton {
 
 .form label[for="chooseTime"]>span,
 .form label[for="submitSchedule"]>span,
+.form label[for="cancelSchedule"]>span,
 .form label[for="submitUser"]>span {
     color: #FFF;
     font-size: 1.5em;
@@ -85,9 +93,17 @@ div.submitButton {
     margin: 0;
 }
 
-.formInformation{
+.form input[name="cancelSchedule"],
+.form label[for="cancelSchedule"]>span
+{
+    color: #006B64 !important;
+    background-color: #D1D1D1 !important;
+}
+
+.formInformation {
     position: relative;
 }
+
 .formInformation::after {
     content: "";
     position: absolute;
@@ -192,4 +208,3 @@ input[type="date"] {
 input[type="radio"] {
     margin: 0.8rem;
 }
-

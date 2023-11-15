@@ -33,18 +33,30 @@
 }
 
 .menu>ul>li {
-    cursor: pointer;
     padding: 1rem;
     position: relative;
     transition-property: none;
 }
 
 .menu>ul>li:hover {
-    text-decoration: underline;
     text-decoration-color: #006B64;
 }
 
-.menu>ul>li>a {
+.menu>ul>li>a{
+    cursor: pointer;
     text-decoration: none;
     color: #006B64;
+}
+
+.menu>ul>li>a:hover {
+    text-decoration: underline;
+}
+
+a[aria-disabled="true"],
+a[aria-disabled="true"]:hover {
+    /* pointer-events: none !important; */
+    cursor: default !important;
+    color: #b1b1b1 !important;
+    text-decoration: none !important;
+    
 }

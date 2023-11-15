@@ -29,7 +29,6 @@ export class ListScheduleView {
             const listSchedulesModel = new ListSchedulesModel();
             const updatedListSchedules = listSchedulesModel.crossHoursData(this.list);
             this.list = updatedListSchedules;
-            console.log(this.list);
 
             const label = document.createElement('label');
             label.classList.add('time');
