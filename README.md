@@ -38,6 +38,9 @@ Para rodar o app faça o download do ZIP no [repositório](https://github.com/Nu
 ```
   gh repo clone Nu7nes/mvp-front-end
 ```
+
+Será necessário a utilização do Node.js para servir o arquivo ou extensões como LiveServer no VSCode para rodar.
+Isso acontece pois o projeto utiliza uma arquitetura em módulos do ES6.
     
 Em seguida basta executar o arquivo no navegador de sua preferência:
 
