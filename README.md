@@ -23,12 +23,7 @@ Com uma demanda significativa, especialmente durante a temporada de declaração
 Recentemente, visando aprimorar o serviço prestado e buscar soluções mais eficientes, surgiu a necessidade premente de desenvolver uma plataforma web inovadora, denominada "AgendaFácil NAF". Essa iniciativa representa um passo importante na direção da simplificação e modernização dos processos de agendamento no Núcleo de Apoio Contábil e Fiscal (NAF), com o objetivo de tornar o acesso aos serviços mais conveniente e acessível para a população local.
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-
-## Demonstração
-
-...
+![https://via.placeholder.com/468x300?text=App+Screenshot+Here](https://github.com/Nu7nes/mvp-front-end/blob/main/Documentos/Screenshots/001.png)
 
 
 ## Rodando localmente
