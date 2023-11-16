@@ -1,4 +1,4 @@
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 680px) {
 
     /* global-styles */
     .container {
@@ -52,7 +52,8 @@
         top: 60px;
         right: 0;
         width: 100vw;
-        height: 40vh;
+        height: max-content !important;
+        padding: 1rem 0;
         background-color: #006B64;
     }
 
@@ -86,11 +87,11 @@
     }
 
     .cardsSection {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        column-gap: 4vw;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        column-gap: 4vw !important;
     }
 
     .card:first-of-type>form {
@@ -124,6 +125,10 @@
 
     /* forms */
 
+    .changeWidth {
+        width: 80% !important;
+    }
+
     .form {
         align-items: center;
     }
@@ -138,7 +143,6 @@
     }
     .formSchedule{
         margin: 0 !important;
-        width: 90% !important;
     }
 
     .availableTimes {
@@ -157,14 +161,12 @@
     }
 
     .mobileButton {
-        width: 65% !important;
+        width: 75% !important;
     }
 }
 
-@media screen and (max-width: 768px) {}
-
-@media screen and (max-width: 1024px) {}
-
-/* 480px
-768px
-1024px */
+@media screen and (min-width: 680px) {
+    .card {
+        padding: 2rem 0;
+    }
+}

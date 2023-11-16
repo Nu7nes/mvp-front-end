@@ -14,7 +14,6 @@ export class ChooseTimeButtonController {
     }
 
     displayTimes() {
-        // console.log(date);
         const listSchedulesModel = new ListSchedulesModel()
         
         listSchedulesModel.getConfig()
@@ -23,7 +22,6 @@ export class ChooseTimeButtonController {
                 const listScheduleView = new ListScheduleView(listSchedulesModel.hours)
                 if (this.dateInputScheduleControler.checkDay(listSchedulesModel.days)) {
                     listScheduleView.render();
-                    // const concludeScheduleButtonController = new ConcludeScheduleButtonController();
                 } else {
                     listScheduleView.emptyTimes();
                 }

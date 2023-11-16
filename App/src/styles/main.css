@@ -5,7 +5,8 @@
     align-items: center;
     row-gap: 4rem;
     width: 100%;
-    height: calc(100vh - 60px);
+    justify-self: center;
+    align-self: center;
 }
 
 .mainHead {
@@ -42,7 +43,7 @@
     width: 380px;
     min-width: 380px;
     min-height: 541px;
-    padding: 3rem 0 3rem 0;
+    padding: 3rem 0 3rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -50,7 +51,6 @@
     border-radius: 15px;
     background: #FFF;
     overflow: hidden;
-    /* transition: all 0.3s  ease-in-out; */
 }
 
 .card:first-of-type {
@@ -58,8 +58,6 @@
     flex-wrap: nowrap;
     transform-origin: left center;
     justify-content: flex-start;
-    /* width: max-content; */
-    /* width: 100%; */
     transition: all 0.1s  ease-in-out;
 }
 
@@ -93,7 +91,6 @@ svg {
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
-    /* 140% */
 }
 
 .card header>p {
@@ -102,7 +99,6 @@ svg {
     font-style: normal;
     font-weight: 300;
     line-height: 19px;
-    /* 158.333% */
 }
 
 .card footer {
@@ -112,13 +108,11 @@ svg {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-
     color: #000;
     text-align: center;
     font-size: 12px;
     font-weight: 300;
     line-height: 19px;
-    /* 158.333% */
 }
 
 .card button {

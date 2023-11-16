@@ -8,8 +8,7 @@ export class ConcludeScheduleButtonController {
         this.submitScheduleForm.addEventListener('submit', this.concludeSchedule.bind(this));
     }
 
-    concludeSchedule(event) {
-        // event.preventDefault();
+    concludeSchedule() {
         const formData = new FormData(this.submitScheduleForm);
         const data = Object.fromEntries(formData);
 
@@ -23,12 +22,8 @@ export class ConcludeScheduleButtonController {
             const concludeScheduleModel = new ConcludeScheduleModel(data);
             concludeScheduleModel.save();
             alert('Agendamento realizado com sucesso!');
-            // window.location.reload();
         } catch (error) {
             console.log(error);
         }
-        // const dataJson = JSON.stringify(data);
-
-        // this.postSchedule(dataJson);
     }
 }

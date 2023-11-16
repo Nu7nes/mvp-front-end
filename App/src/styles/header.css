@@ -54,7 +54,6 @@
 
 a[aria-disabled="true"],
 a[aria-disabled="true"]:hover {
-    /* pointer-events: none !important; */
     cursor: default !important;
     color: #b1b1b1 !important;
     text-decoration: none !important;

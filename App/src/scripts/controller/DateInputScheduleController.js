@@ -15,7 +15,6 @@ export class DateInputScheduleControler {
     init() {
         const date = new Date();
         const todayDate = date.toISOString().slice(0, 10);
-        // console.log(todayDate);
         this.dateInput.value = todayDate;
         return todayDate;
     }

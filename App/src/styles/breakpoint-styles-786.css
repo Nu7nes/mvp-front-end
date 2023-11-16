@@ -1,0 +1,92 @@
+@media screen and (max-width: 786px) {
+    /* header */
+    .header {
+        width: 100%;
+    }
+
+    .header .menuButton {
+        display: block;
+        padding: 0.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background: #006B64;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .header .menuButton>span {
+        top: 10px;
+        right: 10px;
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
+
+    .header .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100vw;
+        height: 20vh;
+        background-color: #006B64;
+    }
+
+    .header .menu>ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .header .menu>ul>li>a {
+        color: #fff
+    }
+
+
+    .header .logo {
+        max-width: 30vw;
+    }
+
+    /* forms */
+    .changeWidth {
+        width: 80% !important;
+    }
+
+    .formInformation::after {
+        display: none !important;
+    }
+
+    .card:first-of-type>form {
+        flex-direction: column;
+    }
+
+    .card:last-of-type::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 10px);
+        width: 80%;
+        height: 1px;
+        background: #006B64;
+    }
+
+    .mobileButton {
+        width: 55% !important;
+        align-self: center;
+    }
+
+}
+
+@media screen and (min-width: 786px) {
+    .card {
+        padding: 3rem 0 3rem 0;
+    }
+    .changeWidth {
+        padding: 2rem !important;
+    }
+}
