@@ -8,13 +8,6 @@ export class ValidadeFormModel {
     }
 
     validateForm() {
-
-        if (this.name === '' || this.email === '' || this.phone === '' || this.date === '' || !this.hour) {
-            console.log(this.hour);
-            alert('Preencha todos os campos!');
-            throw new Error('Preencha todos os campos!');
-        } else {
-            return true;
-        }
+        return this.name === '' || this.email === '' || this.phone === '' || this.date === '' || !this.hour ? false : true;
     }
 }

@@ -4,11 +4,15 @@ import { ConcludeScheduleModel } from "../model/ConcludeScheduleModel.js";
 
 export class ConcludeScheduleButtonController {
     constructor() {
-        this.submitScheduleForm = document.querySelector('#submitScheduleForm');
-        this.submitScheduleForm.addEventListener('submit', this.concludeSchedule.bind(this));
+        this.submitScheduleForm = document.querySelector("#submitScheduleForm");
+        this.submitScheduleForm.addEventListener(
+            "submit",
+            this.concludeSchedule.bind(this)
+        );
     }
 
-    concludeSchedule() {
+    concludeSchedule(event) {
+        event.preventDefault();
         const formData = new FormData(this.submitScheduleForm);
         const data = Object.fromEntries(formData);
 
@@ -18,12 +22,13 @@ export class ConcludeScheduleButtonController {
         try {
             const validateFormModel = new ValidadeFormModel(data);
             const validation = validateFormModel.validateForm();
-            if (!validation) return;
+            if (!validation) return window.alert("Preencha todos os campos!");
             const concludeScheduleModel = new ConcludeScheduleModel(data);
             concludeScheduleModel.save();
-            alert('Agendamento realizado com sucesso!');
+            alert("Agendamento realizado com sucesso!");
+            window.location.reload();
         } catch (error) {
-            console.log(error);
+            throw new Error(error);
         }
     }
 }
