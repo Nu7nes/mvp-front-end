@@ -28,6 +28,8 @@ Recentemente, visando aprimorar o serviço prestado e buscar soluções mais efi
 
 ## Rodando localmente
 
+ - Para vizualizar o app [acesse aqui](https://nu7nes.github.io/mvp-front-end/App/)
+
 Para rodar o app faça o download do ZIP no [repositório](https://github.com/Nu7nes/mvp-front-end/) ou clone o mesmo usando o GitHub CLI com o camando:
 
 ```
