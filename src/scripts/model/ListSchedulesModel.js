@@ -18,7 +18,7 @@ export class ListSchedulesModel {
 
     async getConfig() {
         try {
-            const response = await fetch('/mvp-front-end/App/api/data.json');
+            const response = await fetch('/mvp-front-end/api/data.json');
             const data = await response.json();
             this.config = data.config;
         } catch (error) {
