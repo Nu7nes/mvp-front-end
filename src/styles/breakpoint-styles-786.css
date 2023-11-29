@@ -65,7 +65,7 @@
     }
 
     .card:last-of-type::before {
-        content: '';
+        /* content: ''; */
         position: absolute;
         top: 0;
         left: 50%;
