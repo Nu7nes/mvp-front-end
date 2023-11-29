@@ -21,10 +21,12 @@ O Centro Universitário Serra dos Órgãos (Unifeso), em conjunto com o Núcleo 
 Com uma demanda significativa, especialmente durante a temporada de declaração do Imposto de Renda, o NAF é uma iniciativa que envolve estudantes e professores dos cursos de Administração, Ciências Contábeis e Direito da instituição.
 
 Recentemente, visando aprimorar o serviço prestado e buscar soluções mais eficientes, surgiu a necessidade premente de desenvolver uma plataforma web inovadora, denominada "AgendaFácil NAF". Essa iniciativa representa um passo importante na direção da simplificação e modernização dos processos de agendamento no Núcleo de Apoio Contábil e Fiscal (NAF), com o objetivo de tornar o acesso aos serviços mais conveniente e acessível para a população local.
+
 ## Screenshots
 
 ![https://via.placeholder.com/468x300?text=App+Screenshot+Here](https://github.com/Nu7nes/mvp-front-end/blob/main/_DOCUMENTOS/Screenshots/001.png)
 
+Visualizar protótipo - [Figma](https://www.figma.com/file/MpqPjIShpEzLjBSIHSNkWV/FIGMA---MVP-Front-End?type=design&mode=design&t=JyDVpGk3L16O6l5X-1)
 
 ## Rodando localmente
 
