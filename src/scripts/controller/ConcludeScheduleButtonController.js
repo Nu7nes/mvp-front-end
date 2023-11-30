@@ -1,6 +1,7 @@
 import { ValidadeFormModel } from "../model/ValidateFormModel.js";
 import { FormatNumberPhoneController } from "./FormatNumberPhoneController.js";
 import { ConcludeScheduleModel } from "../model/ConcludeScheduleModel.js";
+import { ConfirmationScheduleView } from "../view/ConfirmationScheduleView.js";
 
 export class ConcludeScheduleButtonController {
     constructor() {
@@ -25,8 +26,10 @@ export class ConcludeScheduleButtonController {
             if (!validation) return window.alert("Preencha todos os campos!");
             const concludeScheduleModel = new ConcludeScheduleModel(data);
             concludeScheduleModel.save();
-            alert("Agendamento realizado com sucesso!");
-            window.location.reload();
+            // alert("Agendamento realizado com sucesso!");
+            const confirmationScheduleView = new ConfirmationScheduleView(data);
+            confirmationScheduleView.render();
+            // window.location.reload();
         } catch (error) {
             throw new Error(error);
         }

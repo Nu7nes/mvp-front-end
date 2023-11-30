@@ -11,5 +11,6 @@ body {
     background-size: contain;
     background-position: bottom;
     min-height: 100vh;
+    position: relative;
 }
 
